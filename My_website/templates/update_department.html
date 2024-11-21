@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Update Department</title>
+    <link rel="stylesheet" href="/static/css/update.css">
+</head>
+
+<body>
+ <h2>Update Department </h2>
+    <form action="/updatedepartmenttodb" method="POST">
+        <table>
+            <tr>
+                <td>Enter department id</td>
+                <td><input type="text" name="did" value={{rows[0][0]}} readonly ></td>
+            </tr>
+            <tr>
+                <td><label for="Department">Choose a department:</label></td>
+                <td>
+                    <select name="departments" id="departments">
+                        <option value="Civil">Civil</option>
+                        <option value="Mech">Mech</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                    required</select> <span class="required">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter the HOD id:</td>
+                <td><input type="text" name="hiname" value={{rows[0][2]}} required> <span class="required">*</span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="save"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

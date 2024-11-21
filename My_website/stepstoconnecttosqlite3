@@ -1,0 +1,68 @@
+Microsoft Windows [Version 10.0.22631.4460]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ALWIN JOSHUA\PycharmProjects\pythonProject\My_website>sqlite3
+SQLite version 3.47.0 2024-10-21 16:30:22
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open mywebsite.db
+sqlite> .tables
+department  hod         student
+sqlite> .schema
+CREATE TABLE student
+(
+id integer primary key autoincrement,
+name text,
+m1 integer,
+m2 integer,
+m3 integer,
+dept text,
+location text,
+gender text,
+phonenumber text,
+dob date);
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE department
+(department_id integer primary key autoincrement,
+department_name text,
+hod_id text);
+CREATE TABLE hod
+(hod_id integer primary key autoincrement,
+hod_name text,
+phonenumber text);
+sqlite> .schema student
+CREATE TABLE student
+(
+id integer primary key autoincrement,
+name text,
+m1 integer,
+m2 integer,
+m3 integer,
+dept text,
+location text,
+gender text,
+phonenumber text,
+dob date);
+sqlite> select * from stydent;
+Parse error: no such table: stydent
+sqlite> select * from student;
+7|umapathi|90|90|90|CSE|Kerala|MALE|987654331|1995-05-02
+8|rez|89|89|89|IT|Andra|FEMALE|987654321|1999-08-04
+9|Reshma|99|99|99|ECE|Kerala|FEMALE|9876543211|1993-10-17
+10|prem|98|98|98|IT|Andra|MALE|987654321|1998-03-31
+11|dhasarathan|98|9|87|88|TamilNadu|MALE|987654321|2014-05-03
+13|sdsf|97|97|97|it|TamilNadu|MALE|975461556|2027-10-01
+sqlite> .mode table
+sqlite> select * from student;
++----+-------------+----+----+----+------+-----------+--------+-------------+------------+
+| id |    name     | m1 | m2 | m3 | dept | location  | gender | phonenumber |    dob     |
++----+-------------+----+----+----+------+-----------+--------+-------------+------------+
+| 7  | umapathi    | 90 | 90 | 90 | CSE  | Kerala    | MALE   | 987654331   | 1995-05-02 |
+| 8  | rez         | 89 | 89 | 89 | IT   | Andra     | FEMALE | 987654321   | 1999-08-04 |
+| 9  | Reshma      | 99 | 99 | 99 | ECE  | Kerala    | FEMALE | 9876543211  | 1993-10-17 |
+| 10 | prem        | 98 | 98 | 98 | IT   | Andra     | MALE   | 987654321   | 1998-03-31 |
+| 11 | dhasarathan | 98 | 9  | 87 | 88   | TamilNadu | MALE   | 987654321   | 2014-05-03 |
+| 13 | sdsf        | 97 | 97 | 97 | it   | TamilNadu | MALE   | 975461556   | 2027-10-01 |
++----+-------------+----+----+----+------+-----------+--------+-------------+------------+
+sqlite>

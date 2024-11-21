@@ -1,0 +1,12 @@
+a,b,c=4,2,3
+print(a,b,c)
+a+=b
+print(a,b,c)
+a-=c
+print(a,b,c)
+a*=b
+print(a,b,c)
+a/=c
+print(a,b,c)
+a%=b
+print(a,b,c)
